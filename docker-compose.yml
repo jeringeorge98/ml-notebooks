@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  stock-predictor:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./mnt:/app/mnt
+    command: jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root
